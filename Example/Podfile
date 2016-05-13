@@ -1,0 +1,6 @@
+use_frameworks!
+target 'APLfm_Tests' do
+  pod 'APLfm', :path => '../'
+  
+  
+end
