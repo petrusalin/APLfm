@@ -14,7 +14,7 @@ public struct LastfmCredential {
     var appKey : String!
     var secret : String!
     
-    init(key : String, secret : String) {
+    public init(key : String, secret : String) {
         self.appKey = key
         self.secret = secret
     }
