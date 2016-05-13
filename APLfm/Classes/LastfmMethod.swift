@@ -140,7 +140,7 @@ public struct LastfmMethod {
     }
     
     
-    init(methodType: LastfmMethodType) {
+    public init(methodType: LastfmMethodType) {
         self.type = methodType
     }
     

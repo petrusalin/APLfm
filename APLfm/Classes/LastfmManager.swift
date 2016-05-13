@@ -32,11 +32,11 @@ public class LastfmManager: NSObject {
         manager.securityPolicy.validatesDomainName = false
     }
     
-    class var sharedInstance: LastfmManager {
+    public class var sharedInstance: LastfmManager {
         return sharedManager
     }
     
-    func configureWithCredential(lastFmCredential : LastfmCredential) {
+    public func configureWithCredential(lastFmCredential : LastfmCredential) {
         self.lastFmCredential = lastFmCredential
     }
     
@@ -53,11 +53,11 @@ public class LastfmManager: NSObject {
         return nil
     }
     
-    func isLoggedIn() -> Bool {
+    public func isLoggedIn() -> Bool {
         return self.loggedInUsername() != nil
     }
     
-    func loggedInUsername() -> String? {
+    public func loggedInUsername() -> String? {
         if let username = NSUserDefaults.standardUserDefaults().objectForKey(self.usernameKey) as? String {
             return username
         }
@@ -69,13 +69,13 @@ public class LastfmManager: NSObject {
         NSUserDefaults.standardUserDefaults().setObject(username, forKey: self.usernameKey)
     }
     
-    func logout() {
+    public func logout() {
         NSUserDefaults.standardUserDefaults().removeObjectForKey(self.usernameKey)
     }
     
     // Mark : requests
     
-    func loginWithUsername(username: String, password: String, completion: (error: NSError?) -> Void) {
+    public func loginWithUsername(username: String, password: String, completion: (error: NSError?) -> Void) {
         if (self.lastFmCredential == nil) {
             return
         }
@@ -98,7 +98,7 @@ public class LastfmManager: NSObject {
         }
     }
     
-    func updateNowPlaying(track: String, artist: String, completion: (error: NSError?) -> Void) {
+    public func updateNowPlaying(track: String, artist: String, completion: (error: NSError?) -> Void) {
         if sharedManager.isLoggedIn() == false || self.lastFmCredential == nil {
             return
         }
@@ -110,7 +110,7 @@ public class LastfmManager: NSObject {
         }
     }
     
-    func scrobble(track: String, artist: String, timestamp: Int, completion: (error: NSError?) -> Void) {
+    public func scrobble(track: String, artist: String, timestamp: Int, completion: (error: NSError?) -> Void) {
         if sharedManager.isLoggedIn() == false || self.lastFmCredential == nil {
             return
         }
@@ -122,7 +122,7 @@ public class LastfmManager: NSObject {
         }
     }
     
-    func executeRequestWithMethod(method: LastfmMethodType, parameters: [String : AnyObject], completion: (response: AnyObject?, error: NSError?) -> Void) {
+    public func executeRequestWithMethod(method: LastfmMethodType, parameters: [String : AnyObject], completion: (response: AnyObject?, error: NSError?) -> Void) {
         if method == .Authentication {
             assert(false, "Use the dedicated method for auth")
         }

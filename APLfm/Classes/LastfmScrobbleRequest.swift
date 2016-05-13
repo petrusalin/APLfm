@@ -13,7 +13,7 @@ public class LastfmScrobbleRequest: LastfmSignedRequest {
     private var artistName: String!
     private var timestamp: Int!
     
-    init(credential: LastfmCredential, sessionKey: String, trackName: String, artistName: String, timestamp: Int) {
+    public init(credential: LastfmCredential, sessionKey: String, trackName: String, artistName: String, timestamp: Int) {
         self.trackName = trackName
         self.artistName = artistName
         self.timestamp = timestamp

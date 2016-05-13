@@ -595,14 +595,14 @@
 				3FD913FE043F88F7FBEF33A7E5A40F69 /* Dictionary+Utils.swift */,
 				D2A1266C53AA2ED0EAD993FD9F49E389 /* KeychainWrapper.h */,
 				26C806327E4C53B01EE0A44344C288A4 /* KeychainWrapper.m */,
-				C436E910D8B3192D527444A6A43FBF0C /* LastfmAuthRequest.swift */,
-				1AC3310270B075C625EFEA2761160B2A /* LastfmManager.swift */,
 				4C79ECC19DF59705CC13CFB5D0554976 /* LastfmMethod.swift */,
-				C7823E5532D5886C97ACC31A8F66205C /* LastfmNowPlayingRequest.swift */,
 				6FDD085992512F5D4E7970824396C57A /* LastfmRequest.swift */,
-				D46B6EA53314CC36AA2432D604F71FD6 /* LastfmScrobbleRequest.swift */,
-				BE0161BDBEB383AE17B0C3F15C1BAD66 /* LastfmSignedRequest.swift */,
 				635C62400A1B69E31B456FBA350747DE /* LastfmUnsignedRequest.swift */,
+				BE0161BDBEB383AE17B0C3F15C1BAD66 /* LastfmSignedRequest.swift */,
+				C436E910D8B3192D527444A6A43FBF0C /* LastfmAuthRequest.swift */,
+				C7823E5532D5886C97ACC31A8F66205C /* LastfmNowPlayingRequest.swift */,
+				D46B6EA53314CC36AA2432D604F71FD6 /* LastfmScrobbleRequest.swift */,
+				1AC3310270B075C625EFEA2761160B2A /* LastfmManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

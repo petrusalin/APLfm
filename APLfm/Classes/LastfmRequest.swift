@@ -28,11 +28,11 @@ public class LastfmRequest: NSObject {
         return "http://ws.audioscrobbler.com/2.0/"
     }
     
-    init(credential: LastfmCredential) {
+    public init(credential: LastfmCredential) {
         self.credential = credential
     }
     
-    func executeWithCompletionBlock(completion: (response: AnyObject?, error: NSError?) -> Void) {
+    public func executeWithCompletionBlock(completion: (response: AnyObject?, error: NSError?) -> Void) {
         let manager = AFHTTPSessionManager()
         
         manager.POST(self.baseURL,

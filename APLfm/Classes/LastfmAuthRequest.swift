@@ -17,7 +17,7 @@ public class LastfmAuthRequest: LastfmRequest {
         return "https://ws.audioscrobbler.com/2.0/"
     }
     
-    init(credential: LastfmCredential,  username: String, password: String) {
+    public init(credential: LastfmCredential,  username: String, password: String) {
         self.username = username
         self.password = password
         
@@ -30,7 +30,7 @@ public class LastfmAuthRequest: LastfmRequest {
         self.prepareForExecute()
     }
     
-    override func executeWithCompletionBlock(completion: (response: AnyObject?, error: NSError?) -> Void) {
+    override public func executeWithCompletionBlock(completion: (response: AnyObject?, error: NSError?) -> Void) {
         super.executeWithCompletionBlock { (response, error) in
             if (error != nil) {
                 completion(response: nil, error: error)

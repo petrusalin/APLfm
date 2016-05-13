@@ -13,7 +13,7 @@ public class LastfmNowPlayingRequest: LastfmSignedRequest {
     private var artistName: String!
     private var albumName: String!
     
-    init(credential: LastfmCredential, sessionKey: String, trackName: String, artistName: String) {
+    public init(credential: LastfmCredential, sessionKey: String, trackName: String, artistName: String) {
         self.trackName = trackName
         self.artistName = artistName
         
