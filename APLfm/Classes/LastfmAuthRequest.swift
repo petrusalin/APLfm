@@ -9,7 +9,7 @@
 import UIKit
 
 
-class LastfmAuthRequest: LastfmRequest {
+public class LastfmAuthRequest: LastfmRequest {
     var username : String!
     var password : String!
     

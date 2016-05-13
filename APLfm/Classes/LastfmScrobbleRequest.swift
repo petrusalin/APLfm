@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LastfmScrobbleRequest: LastfmSignedRequest {
+public class LastfmScrobbleRequest: LastfmSignedRequest {
     private var trackName: String!
     private var artistName: String!
     private var timestamp: Int!

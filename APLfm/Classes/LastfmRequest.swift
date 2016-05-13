@@ -10,7 +10,7 @@ import UIKit
 import AFNetworking
 import CryptoSwift
 
-struct LastfmCredential {
+public struct LastfmCredential {
     var appKey : String!
     var secret : String!
     
@@ -20,7 +20,7 @@ struct LastfmCredential {
     }
 }
 
-internal class LastfmRequest: NSObject {
+public class LastfmRequest: NSObject {
     internal var credential : LastfmCredential!
     internal var sessionToken : String!
     internal var lastfmMethod: LastfmMethod?

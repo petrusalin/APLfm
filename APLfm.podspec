@@ -19,6 +19,10 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
     A simple framework to facilitate working with the Last.fm API
+
+    Request can be made either via the LastfmManager or via individual request. In the latter case, the AFHTTPSessionManager needs to be configured
+    Common parameters like key, sessionToken, signature need not be sent in the request.
+    So for a scroble request for example, the only mandatory parameters to be sent in the dictionary would be the artist and the track
                        DESC
 
   s.homepage         = "https://github.com/petrusalin/APLfm"

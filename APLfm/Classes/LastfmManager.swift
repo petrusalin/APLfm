@@ -12,7 +12,7 @@ import AFNetworking
 private let sharedManager = LastfmManager()
 
 
-class LastfmManager: NSObject {
+public class LastfmManager: NSObject {
     private let keychain = KeychainWrapper()
     private let usernameKey = "lastfmUsernameKey"
     private var lastFmCredential : LastfmCredential!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LastfmUnsignedRequest: LastfmRequest {
+public class LastfmUnsignedRequest: LastfmRequest {
     class func unsignedRequestWithMethodType(methodType: LastfmMethodType, parameters: [String : AnyObject], credentials: LastfmCredential) -> LastfmUnsignedRequest {
         let request = LastfmUnsignedRequest.init(credential: credentials)
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LastfmSignedRequest: LastfmRequest {
+public class LastfmSignedRequest: LastfmRequest {
     
     init(credential: LastfmCredential, sessionKey: String) {
         super.init(credential: credential)

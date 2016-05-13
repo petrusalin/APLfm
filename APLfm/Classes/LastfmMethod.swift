@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum LastfmMethodType: String {
+public enum LastfmMethodType: String {
     case Authentication           = "auth.getMobileSession"
 
     case NowPlaying               = "track.updateNowPlaying"
@@ -85,7 +85,7 @@ enum LastfmMethodType: String {
     }
 }
 
-enum LastfmKeys: String {
+public enum LastfmKeys: String {
     case Method         = "method"
     case Username       = "username"
     case Password       = "password"
@@ -131,7 +131,7 @@ enum LastfmKeys: String {
     }
 }
 
-struct LastfmMethod {
+public struct LastfmMethod {
     var type: LastfmMethodType
     var parameters = [String: AnyObject]()
     

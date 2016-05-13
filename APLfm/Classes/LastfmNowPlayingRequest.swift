@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LastfmNowPlayingRequest: LastfmSignedRequest {
+public class LastfmNowPlayingRequest: LastfmSignedRequest {
     private var trackName: String!
     private var artistName: String!
     private var albumName: String!
