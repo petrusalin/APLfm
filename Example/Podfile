@@ -1,6 +1,12 @@
+platform :ios, '8.0'
 use_frameworks!
+
 target 'APLfm_Tests' do
   pod 'APLfm', :path => '../'
   
+  pod 'AFNetworking', '~> 3.0'
+  pod 'CryptoSwift'
+  
+  source 'https://github.com/CocoaPods/Specs.git'
   
 end
