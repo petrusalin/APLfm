@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/petrusalin/APLfm.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'APLfm/Classes/**/*'
   
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   # }
 
   #s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'MapKit'ls
   s.dependency 'AFNetworking', '~> 3.0'
   s.dependency 'CryptoSwift'
 
