@@ -176,7 +176,7 @@
 		1EA79DD4EA2CF7E1673FFAFABF179F6F /* CryptoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-prefix.pch"; sourceTree = "<group>"; };
 		239F4A4A608024AAAD4A3B891A848265 /* String+FoundationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+FoundationExtension.swift"; path = "Sources/CryptoSwift/Foundation/String+FoundationExtension.swift"; sourceTree = "<group>"; };
 		24824F508FC0BEE71AC71C38526F31B9 /* APLfm-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APLfm-prefix.pch"; sourceTree = "<group>"; };
-		26C806327E4C53B01EE0A44344C288A4 /* KeychainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		26C806327E4C53B01EE0A44344C288A4 /* KeychainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KeychainWrapper.m; path = Classes/KeychainWrapper.m; sourceTree = "<group>"; };
 		295DAB3C9B0C4DB61D9540BD6DDBADF6 /* APLfm-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APLfm-umbrella.h"; sourceTree = "<group>"; };
 		29CF2DA6D260D5F0E96DB71E8B32FE4A /* APLfm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APLfm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4C5EDB75F022A194C001C0F4A25CCD /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		CF5E85D36B16E10CF7FC9C28E9B01D6F /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
 		D1552FFF1DE50FDB9D86F2BA21D960D2 /* NoPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoPadding.swift; path = Sources/CryptoSwift/NoPadding.swift; sourceTree = "<group>"; };
 		D22D2A722A6E4BD29B4EEFA7E0C52042 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
-		D2A1266C53AA2ED0EAD993FD9F49E389 /* KeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		D2A1266C53AA2ED0EAD993FD9F49E389 /* KeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeychainWrapper.h; path = Classes/KeychainWrapper.h; sourceTree = "<group>"; };
 		D4449AA0031CD60285AE0A2BD1CF74C9 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
 		D46B6EA53314CC36AA2432D604F71FD6 /* LastfmScrobbleRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LastfmScrobbleRequest.swift; sourceTree = "<group>"; };
 		D4829FDDA4132BC779E3B1C777C51936 /* NSData+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSData+Extension.swift"; path = "Sources/CryptoSwift/Foundation/NSData+Extension.swift"; sourceTree = "<group>"; };
@@ -374,6 +374,15 @@
 				E8A820432C4E86A7C999BC088214F88B /* UIKit */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		259333751CEC4F0000124E52 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				D2A1266C53AA2ED0EAD993FD9F49E389 /* KeychainWrapper.h */,
+				26C806327E4C53B01EE0A44344C288A4 /* KeychainWrapper.m */,
+			);
+			name = Apple;
 			sourceTree = "<group>";
 		};
 		2A682C5B4C0F9D623428BF1755B46424 /* Targets Support Files */ = {
@@ -522,6 +531,7 @@
 		7EFCF66DDE4D024B9EDF2589125327BD /* APLfm */ = {
 			isa = PBXGroup;
 			children = (
+				259333751CEC4F0000124E52 /* Apple */,
 				C80A54E736A3E155334C9F7E2C75E3E8 /* Classes */,
 			);
 			path = APLfm;
@@ -593,8 +603,6 @@
 			isa = PBXGroup;
 			children = (
 				3FD913FE043F88F7FBEF33A7E5A40F69 /* Dictionary+Utils.swift */,
-				D2A1266C53AA2ED0EAD993FD9F49E389 /* KeychainWrapper.h */,
-				26C806327E4C53B01EE0A44344C288A4 /* KeychainWrapper.m */,
 				4C79ECC19DF59705CC13CFB5D0554976 /* LastfmMethod.swift */,
 				6FDD085992512F5D4E7970824396C57A /* LastfmRequest.swift */,
 				635C62400A1B69E31B456FBA350747DE /* LastfmUnsignedRequest.swift */,
