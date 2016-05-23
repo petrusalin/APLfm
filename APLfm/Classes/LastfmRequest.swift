@@ -76,6 +76,9 @@ public class LastfmRequest: NSObject {
                 } else {
                     concatenatedString += value
                 }
+            } else if let value = dictionary[key] as? Int {
+                concatenatedString += key.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+                concatenatedString += String(value)
             }
         }
         
