@@ -59,8 +59,6 @@ extension Array : RequestSigning {
             string = value!.concatenateToString(string, withKey: key)
         }
         
-        
-        
         return string
     }
 }
