@@ -26,6 +26,7 @@
 		2134D96DB9DAA5645C8C364441CE74D2 /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AF8BC946A30CDE3EBD987998E095DE /* CFB.swift */; };
 		24954A977BEF1126C49A42858CFCBE31 /* IntegerConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C9B15F3368ED7CE9049E09C388E6A /* IntegerConvertible.swift */; };
 		25AE04C7ECCC6307C8D33416CDF1B41A /* LastfmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDD085992512F5D4E7970824396C57A /* LastfmRequest.swift */; };
+		25B67FC51CF4835700CC3765 /* RequestSigning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B67FC41CF4835700CC3765 /* RequestSigning.swift */; };
 		2C38EB7ACB4DCBC3D57270CD51734988 /* CSArrayType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597CD9247DF0DA28E073C3B2DF265DD /* CSArrayType+Extensions.swift */; };
 		2E8A32ED46194EDBE22146271F6D26DE /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F58AB985E76F1D9AF50E8364264001B /* UIImageView+AFNetworking.m */; };
 		37C3A84FA081E1C197F5D993AE1DA974 /* String+LinuxFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78184B13D1F26462A6D61EFE1ADCF8 /* String+LinuxFoundation.swift */; };
@@ -176,6 +177,7 @@
 		1EA79DD4EA2CF7E1673FFAFABF179F6F /* CryptoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-prefix.pch"; sourceTree = "<group>"; };
 		239F4A4A608024AAAD4A3B891A848265 /* String+FoundationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+FoundationExtension.swift"; path = "Sources/CryptoSwift/Foundation/String+FoundationExtension.swift"; sourceTree = "<group>"; };
 		24824F508FC0BEE71AC71C38526F31B9 /* APLfm-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APLfm-prefix.pch"; sourceTree = "<group>"; };
+		25B67FC41CF4835700CC3765 /* RequestSigning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSigning.swift; sourceTree = "<group>"; };
 		26C806327E4C53B01EE0A44344C288A4 /* KeychainWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KeychainWrapper.m; path = Classes/KeychainWrapper.m; sourceTree = "<group>"; };
 		295DAB3C9B0C4DB61D9540BD6DDBADF6 /* APLfm-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APLfm-umbrella.h"; sourceTree = "<group>"; };
 		29CF2DA6D260D5F0E96DB71E8B32FE4A /* APLfm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APLfm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -611,6 +613,7 @@
 				C7823E5532D5886C97ACC31A8F66205C /* LastfmNowPlayingRequest.swift */,
 				D46B6EA53314CC36AA2432D604F71FD6 /* LastfmScrobbleRequest.swift */,
 				1AC3310270B075C625EFEA2761160B2A /* LastfmManager.swift */,
+				25B67FC41CF4835700CC3765 /* RequestSigning.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -801,7 +804,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -863,6 +866,7 @@
 				5AB429E5EB377FFD63895D757AE92E74 /* APLfm-dummy.m in Sources */,
 				9839B7B1ACD9CB2BB3F7DF1AFC08B8EE /* Dictionary+Utils.swift in Sources */,
 				1ECEE3B874EEEE81CB503A147DC1E63D /* KeychainWrapper.m in Sources */,
+				25B67FC51CF4835700CC3765 /* RequestSigning.swift in Sources */,
 				87C86BE09B5DECB05ED8BEEC60E8279B /* LastfmAuthRequest.swift in Sources */,
 				5B93750D25A43FB26E3985CA3DB52389 /* LastfmManager.swift in Sources */,
 				99B448416E1425D36EA146024585AFC7 /* LastfmMethod.swift in Sources */,
@@ -974,6 +978,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2BB9DA6087A0DB846A60CFF6855B626 /* AFNetworking.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1062,6 +1067,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2BB9DA6087A0DB846A60CFF6855B626 /* AFNetworking.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1080,6 +1086,7 @@
 				PRODUCT_NAME = AFNetworking;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

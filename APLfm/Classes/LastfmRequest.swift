@@ -68,17 +68,8 @@ public class LastfmRequest: NSObject {
         var concatenatedString = ""
         
         for key in sortedParameters {
-            if let value = dictionary[key] as? String {
-                concatenatedString += key.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-                
-                if (LastfmKeys.keyRequiresUrlEncoding(key)) {
-                    concatenatedString += value.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-                } else {
-                    concatenatedString += value
-                }
-            } else if let value = dictionary[key] as? Int {
-                concatenatedString += key.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-                concatenatedString += String(value)
+            if let value = dictionary[key] as? RequestSigning {
+                concatenatedString = value.concatenateToString(concatenatedString, withKey: key)
             }
         }
         
