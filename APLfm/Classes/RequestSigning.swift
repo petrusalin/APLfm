@@ -12,6 +12,40 @@ protocol RequestSigning {
     func concatenateToString(destinationString: String, withKey key: String) -> String
 }
 
+internal enum Signable : RequestSigning {
+    case Str(Swift.String)
+    case Int(Swift.Int)
+    case Array([AnyObject])
+    case Null
+    
+    init(data: AnyObject) {
+        switch data {
+        case let v as [AnyObject]:
+            self = .Array(v)
+        case let v as Swift.String:
+            self = .Str(v)
+        case let v as Swift.Int:
+            self = .Int(v)
+        default:
+            self = .Null
+        }
+    }
+    
+    func concatenateToString(destinationString: String, withKey key: String) -> String {
+        switch self {
+        case .Int (let value):
+            return value.concatenateToString(destinationString, withKey: key)
+        case .Str (let string):
+            return string.concatenateToString(destinationString, withKey: key)
+        case .Array (let array):
+            return array.concatenateToString(destinationString, withKey: key)
+            
+        case .Null:
+            return destinationString
+        }
+    }
+}
+
 extension String : RequestSigning {
     func concatenateToString(destinationString: String, withKey key: String) -> String {
         var string = destinationString

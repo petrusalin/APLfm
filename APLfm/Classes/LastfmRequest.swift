@@ -68,8 +68,11 @@ public class LastfmRequest: NSObject {
         var concatenatedString = ""
         
         for key in sortedParameters {
-            if let value = dictionary[key] as? RequestSigning {
-                concatenatedString = value.concatenateToString(concatenatedString, withKey: key)
+            if let value =  dictionary[key] {
+                let signable = Signable(data: value)
+                concatenatedString = signable.concatenateToString(concatenatedString, withKey: key)
+            } else {
+                print(dictionary[key])
             }
         }
         
