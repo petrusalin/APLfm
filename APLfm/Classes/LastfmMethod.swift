@@ -150,7 +150,12 @@ public enum LastfmMethods {
         case Unlove               = "track.unlove"
         
         public func requiresSigning() -> Bool {
-            return self.requiresSigning()
+            switch self {
+            case .NowPlaying, .Scrobble, .AddTags, .RemoveTag, .Love, .Unlove:
+                return true
+            default:
+                return false
+            }
         }
         
         public func path() -> String {
