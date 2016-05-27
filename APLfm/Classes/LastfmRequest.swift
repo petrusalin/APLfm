@@ -38,6 +38,12 @@ public class LastfmRequest: NSObject {
         return "http://ws.audioscrobbler.com/2.0/"
     }
     
+    class var maxRequestsPerBatch : Int  {
+        get {
+            return 50
+        }
+    }
+    
     internal init(credential: LastfmCredential) {
         self.credential = credential
     }
