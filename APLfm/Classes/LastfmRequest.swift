@@ -38,7 +38,7 @@ public class LastfmRequest: NSObject {
         return "http://ws.audioscrobbler.com/2.0/"
     }
     
-    static var maxRequestsPerBatch : Int  {
+    public class var maxRequestsPerBatch : Int  {
         get {
             return 50
         }
