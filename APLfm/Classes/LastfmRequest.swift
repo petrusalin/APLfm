@@ -95,7 +95,7 @@ public class LastfmRequest: NSObject {
             }
         }
         
-        self.lastfmMethod!.parameters.update(parameters)
+        self.lastfmMethod!.parameters.update(dict)
     }
 }
 
